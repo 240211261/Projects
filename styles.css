@@ -1,0 +1,279 @@
+body {
+    background-color: #18181b;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.left {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 9%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center {
+    position: absolute;
+    top: 0;
+    /* right: 0; */
+    width: 81%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+    align-items: center;
+    justify-content: center;
+    background-color: #23272f;
+
+}
+
+.right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 9%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #1e1e24;
+    color: #e5e7eb;
+    /* list-style: none; */
+}
+
+.right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav {
+    width: 6vw;
+    height: 100vh;
+    background-color: #23272f;
+    padding: 20px;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    filter: brightness(0.8) contrast(1.2);
+}
+
+.search {
+    border-radius: 25px;
+    width: 100%;
+    height: 50px;
+    background-color: #23272f;
+    color: #e5e7eb;
+    border: 1px solid #31313a;
+    display: flex;
+    align-items: center;
+    padding: 0 28vw;
+    margin: 0 auto;
+    box-sizing: border-box;
+    /* position: fixed;
+    top: 20px; */
+
+}
+
+.search input[type="text"],
+form input[type="text"] {
+    background: #18181b;
+    color: #e5e7eb;
+    border: none;
+    outline: none;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+    padding: 0px;
+}
+
+form button {
+    border-radius: 25px;
+    padding: 8px 24px;
+    border: none;
+    background-color: #6366f1;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+form button:hover {
+    background-color: #4338ca;
+}
+
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+
+}
+
+.first_block {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.first_block img {
+    width: 100px;
+    left: 20px;
+    /* height: 50%; */
+    object-fit: cover;
+}
+
+.first_block .weather {
+    position: absolute;
+    top: 11%;
+    right: 15%;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.first_block .city {
+    position: absolute;
+    top: 11%;
+    left: 10%;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.first_block h2 {
+    padding-left: 5%;
+    color: #000000;
+    /* font-size: 2rem; */
+    text-align: center;
+}
+
+.box {
+    margin: 5px;
+    position: relative;
+    /* top: 10%; */
+    width: 95%;
+    height: 60%;
+    border-radius: 25px;
+    background-color: #23272f;
+    border: 2px solid #31313a;
+    color: #e5e7eb;
+}
+
+.weather-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.weather-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+}
+
+.weather-item .time {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.weather-item img {
+    width: 40px;
+    height: 40px;
+     filter: drop-shadow(0 0 2px #6366f1);
+}
+
+.vertical-divider {
+    width: 2px;
+    height: 80px;
+     background-color: #31313a;
+    margin: 0 10px;
+}
+
+.today_wed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     filter: drop-shadow(0 0 2px #6366f1);
+}
+
+.lable {
+    color: #a5b4fc;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.city h2{
+    color: #e5e7eb;
+}
+
+.city h3 {
+    color: #a5b4fc;
+    font-size: 1.2rem;
+}
