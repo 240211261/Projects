@@ -2,143 +2,125 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <div class="main">
-        <div class="left">
-            <div class="nav">
-                <ul>
-                    <li class="logo">
-                        <img src="weather-tornado-svgrepo-com.svg" alt="Logo">
-                    </li>
-                    <li><a href="index.html">Home</a></li>
-                    <!-- <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li> -->
-                </ul>
-            </div>
-        </div>
-
-        <div class="center">
-
-            <div>
-                <form id="search-form">
-                    <input class="search" type="text" id="query" placeholder="Search...">
-                    <button type="submit">Search</button>
-                </form>
-            </div>
-
-            <div class="first_block">
-                <div class="city">
-                    <img src="city-svgrepo-com.svg" alt="">
-                    <h2>
-                        <div id="city-name">
-
-                        </div>
-                    </h2>
-
-                    <h3>
-                        <div id="current-temp"></div>
-                    </h3>
-
-                </div>
-
-                <div class="weather" id="current-condition">
-
-                </div>
-            </div>
-
-
-            <div class="second box">
-                <div class="today_wed">
-                    <h2>Today's Sun Schedule</h2>
-                </div>
-
-                <ul class="weather-list">
-                    <li class="weather-item">
-                        <span class="time" id="sunrise-time">Sunrise</span>
-                        <img id="sunrise-icon" src="weather-sunny.svg" alt="Sunrise">
-                        <div id="sunrise-value">5:32 AM</div>
-                    </li>
-                    <div class="vertical-divider"></div>
-
-                    <li class="weather-item">
-                        <span class="time" id="sunset-time">Sunset</span>
-                        <img id="sunset-icon" src="night-svgrepo-com.svg" alt="Sunset">
-                        <div id="sunset-value">7:22 PM</div>
-                    </li>
-                </ul>
-            </div>
-
-
-            <div class="third box">
-
-                <div class="today_wed">
-                    <h3>
-                        Other detail's
-                    </h3>
-                </div>
-                <div id="current-condition"></div>
-                <div class="details-grid">
-
-                    <div class="detail-item">
-
-                        <div class="lable" id="feels-like-label">Temp feel like</div>
-                        <div id="current-temp"></div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="lable" id="humidity-label">Humidity</div>
-                        <div id="current-humidity"></div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="lable" id="wind-label">Wind Speed</div>
-                        <div id="current-wind"></div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="lable" id="pressure-label">Pressure</div>
-                        <div id="current-pressure"></div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="right">
-            <h2>Week Days</h2>
-            <ul>
-                <li>Monday</li>
-                <li><img id="mon-icon" src="weather-tornado-svgrepo-com.svg" alt="Weather Icon"></li>
-
-                <li>Tuesday</li>
-                <li><img id="tue-icon" src="weather-tornado-svgrepo-com.svg" alt="Weather Icon"></li>
-
-                <li>Wednesday</li>
-                <li><img id="wed-icon" src="weather-tornado-svgrepo-com.svg" alt="Weather Icon"></li>
-
-                <li>Thursday</li>
-                <li><img id="thu-icon" src="weather-tornado-svgrepo-com.svg" alt="Weather Icon"></li>
-
-                <li>Friday</li>
-                <li><img id="fri-icon" src="weather-tornado-svgrepo-com.svg" alt="Weather Icon"></li>
-
-                <li>Saturday</li>
-                <li><img id="sat-icon" src="weather-tornado-svgrepo-com.svg" alt="Weather Icon"></li>
-
-                <li>Sunday</li>
-                <li><img id="sun-icon" src="weather-tornado-svgrepo-com.svg" alt="Weather Icon"></li>
-
-        </div>
-
+  <div class="main">
+    <div class="left">
+      <div class="nav">
+        <ul>
+          <li class="logo">
+            <img src="weather-tornado-svgrepo-com.svg" alt="Logo">
+          </li>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </div>
     </div>
 
-    <script src="script.js"></script>
+    <div class="center">
 
+      <!-- Search Bar -->
+      <div>
+        <form id="search-form">
+          <input class="search" type="text" id="query" placeholder="Search city...">
+          <button type="submit">Search</button>
+        </form>
+      </div>
+
+      <!-- Current City + Temp -->
+      <div class="first_block">
+        <div class="city">
+          <img src="city-svgrepo-com.svg" alt="">
+          <h2 id="city-name"></h2>
+          <h3 id="current-temp"></h3>
+        </div>
+
+        <div class="weather" id="current-condition"></div>
+      </div>
+
+      <!-- Sun Times -->
+      <div class="second box">
+        <div class="today_wed">
+          <h2>Today's Sun Schedule</h2>
+        </div>
+        <ul class="weather-list">
+          <li class="weather-item">
+            <span class="time">Sunrise</span>
+            <img id="sunrise-icon" src="weather-sunny.svg" alt="Sunrise">
+            <div id="sunrise-value"></div>
+          </li>
+          <div class="vertical-divider"></div>
+          <li class="weather-item">
+            <span class="time">Sunset</span>
+            <img id="sunset-icon" src="night-svgrepo-com.svg" alt="Sunset">
+            <div id="sunset-value"></div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Other Details -->
+      <div class="third box">
+        <div class="today_wed">
+          <h3>Other Details</h3>
+        </div>
+        <div class="details-grid">
+
+          <div class="detail-item">
+            <div class="label">Feels Like</div>
+            <div id="feels-like"></div>
+          </div>
+
+          <div class="detail-item">
+            <div class="label">Humidity</div>
+            <div id="current-humidity"></div>
+          </div>
+
+          <div class="detail-item">
+            <div class="label">Wind Speed</div>
+            <div id="current-wind"></div>
+          </div>
+
+          <div class="detail-item">
+            <div class="label">Precipitation</div>
+            <div id="current-precipitation"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Weekly Forecast -->
+    <div class="right">
+      <h2>Week Days</h2>
+      <ul>
+        <li>Monday</li>
+        <li><img id="mon-icon" src="weather-tornado-svgrepo-com.svg" alt="Weather Icon"></li>
+
+        <li>Tuesday</li>
+        <li><img id="tue-icon" src="weather-tornado-svgrepo-com.svg" alt="Weather Icon"></li>
+
+        <li>Wednesday</li>
+        <li><img id="wed-icon" src="weather-tornado-svgrepo-com.svg" alt="Weather Icon"></li>
+
+        <li>Thursday</li>
+        <li><img id="thu-icon" src="weather-tornado-svgrepo-com.svg" alt="Weather Icon"></li>
+
+        <li>Friday</li>
+        <li><img id="fri-icon" src="weather-tornado-svgrepo-com.svg" alt="Weather Icon"></li>
+
+        <li>Saturday</li>
+        <li><img id="sat-icon" src="weather-tornado-svgrepo-com.svg" alt="Weather Icon"></li>
+
+        <li>Sunday</li>
+        <li><img id="sun-icon" src="weather-tornado-svgrepo-com.svg" alt="Weather Icon"></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
